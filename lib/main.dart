@@ -103,11 +103,27 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      floatingActionButtonLocation: FloatingActionButtonLocation.miniCenterDocked,
+      floatingActionButton:Container(
+        width: 150,
+        height: 100,
+        color: Colors.redAccent,
+        child:FloatingActionButton(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(30.0)),
+          ),
+          backgroundColor: Colors.amber,
+          onPressed: _incrementCounter,
+          tooltip: 'Increment',
+          child: Text(
+            'Kayıt',style: TextStyle(
+            color: Colors.black,
+            fontSize: 25.0,
+          ),
+          ),
+          //child: Icon(Icons.add),
+        ),
+      ),
     );
   }
 }
